@@ -23,10 +23,10 @@ namespace FSharpXamarin.AppAndroid
     #nowarn "51" // address-of operator can occur in the code
     #nowarn "1183" // unused 'this' reference
     
-    exception ReturnException27d58df40b9f42879e9a4f8ba7586de0 of obj
-    exception ReturnNoneException27d58df40b9f42879e9a4f8ba7586de0
+    exception ReturnExceptionffc9c97ab89249d6b80b0c1236f77300 of obj
+    exception ReturnNoneExceptionffc9c97ab89249d6b80b0c1236f77300
     [<AutoOpen>]
-    module FuncConvertFinalOverload27d58df40b9f42879e9a4f8ba7586de0 =
+    module FuncConvertFinalOverloadffc9c97ab89249d6b80b0c1236f77300 =
       // This extension member adds to the FuncConvert type and is the last resort member in the method overloading rules. 
       type global.Microsoft.FSharp.Core.FuncConvert with
           /// A utility function to convert function values from tupled to curried form
