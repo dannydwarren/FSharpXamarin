@@ -26,7 +26,7 @@ type MainActivity () =
         let button = this.FindViewById<Button>(Resource_Id.MyButton)
         button.Click.Add (fun args -> 
             button.Text <- sprintf "%d clicks!" count
-            count <- count + 1
+            count <- FSharpXamarin.Common.A.DoWork(count)
         )
 
 

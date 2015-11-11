@@ -15,16 +15,25 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace FSharpXamarin.AppWindows8
+namespace FSharpXamarin
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
-    public sealed partial class MainPage : Page
-    {
-        public MainPage()
-        {
-            this.InitializeComponent();
-        }
-    }
+	/// <summary>
+	/// An empty page that can be used on its own or navigated to within a Frame.
+	/// </summary>
+	public sealed partial class MainPage : Page
+	{
+		public MainPage()
+		{
+			this.InitializeComponent();
+
+			MyButton.Click += MyButton_Click;
+		}
+
+		private int count = 0;
+		private void MyButton_Click( object sender, RoutedEventArgs e )
+		{
+			count = FSharpXamarin.Common.A.DoWork( count );
+			MyButton.Content = $"Button Clicked {count} times!";
+		}
+	}
 }

@@ -1,4 +1,4 @@
-﻿namespace FSharpXamarin.Common
+﻿namespace TestingCompat1
 
 type Class1() = 
     member this.X = "F#"

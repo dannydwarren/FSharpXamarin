@@ -27,8 +27,14 @@ namespace FSharpXamarin.AppUwp
         {
             this.InitializeComponent();
 
-	        var a = new Class1();
-	        MyLabel.Text = a.X;
-        }
+			MyButton.Click += MyButton_Click;
+		}
+
+		private int count = 0;
+		private void MyButton_Click( object sender, RoutedEventArgs e )
+		{
+			count = FSharpXamarin.Common.A.DoWork( count );
+			MyButton.Content = $"Button Clicked {count} times!";
+		}
     }
 }
