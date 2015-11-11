@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Microsoft.FSharp.Core;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -33,7 +34,14 @@ namespace FSharpXamarin
 		private void MyButton_Click( object sender, RoutedEventArgs e )
 		{
 			count = FSharpXamarin.Common.A.DoWork( count );
-			MyButton.Content = $"Button Clicked {count} times!";
+
+			//var num = new Always5.Trick2.AnyNumber1To99(2); //Restricted Access
+
+			FSharpOption<Always5.Trick2.AnyNumber1To99> a = Always5.Trick2.CreateAnyNumber1To99(count);
+			Always5.Trick2.AnyNumber1To99 b = a.Value;
+
+            int val = Always5.Trick2.Solve( b );
+			MyButton.Content = $"Button Clicked {count} times! For a value of {val}";
 		}
 	}
 }
