@@ -25,8 +25,11 @@ type MainActivity () =
         // Get our button from the layout resource, and attach an event to it
         let button = this.FindViewById<Button>(Resource_Id.MyButton)
         button.Click.Add (fun args -> 
-            button.Text <- sprintf "%d clicks!" count
-            count <- FSharpXamarin.Common.A.DoWork(count)
+            count <- count + 1
+            let value = Always5.Trick1.Solve(count);
+            button.Text <- sprintf "%d clicks! -- %d Value!" count value
+
+            
         )
 
 

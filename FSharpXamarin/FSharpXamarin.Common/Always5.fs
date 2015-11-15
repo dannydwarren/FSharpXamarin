@@ -5,11 +5,15 @@
         let DivideBy2 current = current / 2
         let SubtractOriginal (current, original) = current - original
 
+        let AddNextHighestNumberAdd9DivideBy2 =
+            AddNextHighestNumber >> Add9 >> DivideBy2
+
+        let AddNextHighestNumberAdd9DivideBy2Pipe x =
+            x |> AddNextHighestNumber |> Add9 |> DivideBy2
+
         let Solve anyNumber:int = 
             anyNumber
-            |> AddNextHighestNumber
-            |> Add9
-            |> DivideBy2
+            |> AddNextHighestNumberAdd9DivideBy2
             |> fun x-> (x, anyNumber)
             |> SubtractOriginal 
     
@@ -31,7 +35,6 @@
         let Solve (anyNumber1To99 : AnyNumber1To99) : int =
             //Because the value passed to Solve is assumed to be a valid int between 1 to 99
             //  we want to unpack the Discriminated Union type helping into an int.
-
             anyNumber1To99
             |> Unpack
             |> MultiplyBy5

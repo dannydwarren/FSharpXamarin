@@ -5,6 +5,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Microsoft.FSharp.Core;
 
 namespace FSharpXamarin.CSharpUI.AppAndroid
 {
@@ -26,8 +27,23 @@ namespace FSharpXamarin.CSharpUI.AppAndroid
 
 			button.Click += delegate
 			{
-				count = FSharpXamarin.Common.A.DoWork(count);
-				button.Text = string.Format( "{0} clicks!", count++ );
+				count = count + 1;
+
+				//var num = new Always5.Trick2.AnyNumber1To99(2); //Restricted Access
+
+				FSharpOption<Always5.Trick2.AnyNumber1To99> a = Always5.Trick2.CreateAnyNumber1To99( count );
+				Always5.Trick2.AnyNumber1To99 b;
+				try
+				{
+					b = a.Value;
+				}
+				catch ( NullReferenceException ex )
+				{
+					return;
+				}
+
+				int val = Always5.Trick2.Solve( b );
+				button.Text = $"Button Clicked {count} times! For a value of {val}";
 			};
 		}
 	}

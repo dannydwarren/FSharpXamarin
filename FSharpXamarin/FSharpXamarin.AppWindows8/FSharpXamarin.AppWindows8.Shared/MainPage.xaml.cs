@@ -37,10 +37,18 @@ namespace FSharpXamarin
 
 			//var num = new Always5.Trick2.AnyNumber1To99(2); //Restricted Access
 
-			FSharpOption<Always5.Trick2.AnyNumber1To99> a = Always5.Trick2.CreateAnyNumber1To99(count);
-			Always5.Trick2.AnyNumber1To99 b = a.Value;
+			FSharpOption<Always5.Trick2.AnyNumber1To99> a = Always5.Trick2.CreateAnyNumber1To99( count );
+			Always5.Trick2.AnyNumber1To99 b;
+            try
+			{
+				b = a.Value;
+			}
+			catch ( NullReferenceException ex )
+			{
+				return;
+			}
 
-            int val = Always5.Trick2.Solve( b );
+			int val = Always5.Trick2.Solve( b );
 			MyButton.Content = $"Button Clicked {count} times! For a value of {val}";
 		}
 	}
