@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B876A426-A531-4397-AC19-96B239059D54}</ProjectGuid>
+    <ProjectGuid>{A4E1F105-FCCB-4AD8-A0A7-543220B966E9}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FSharpXamarin.CSharpUI.AppAndroid</RootNamespace>
-    <AssemblyName>FSharpXamarin.CSharpUI.AppAndroid</AssemblyName>
+    <RootNamespace>FSharpXamarin.CSharpUI.VS2015.AppAndroid</RootNamespace>
+    <AssemblyName>FSharpXamarin.CSharpUI.VS2015.AppAndroid</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidApplication>true</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
@@ -42,6 +42,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FSharp.Core" />
+    <Reference Include="FSharpXamarin.FSharpPortableLibCreatedByVS2015">
+      <HintPath>..\FSharpXamarin.FSharpPortableLibCreatedByVS2015\bin\Debug\FSharpXamarin.FSharpPortableLibCreatedByVS2015.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
@@ -71,18 +74,12 @@
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FSharpXamarin.Common\FSharpXamarin.Common.fsproj">
-      <Project>{51e26000-cfbe-4bff-908c-1f4efd536ba4}</Project>
-      <Name>FSharpXamarin.Common</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
      Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+		<Target Name="BeforeBuild">
+		</Target>
+		<Target Name="AfterBuild">
+		</Target>
+ -->
 </Project>
