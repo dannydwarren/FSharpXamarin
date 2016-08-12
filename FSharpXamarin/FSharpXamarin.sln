@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Tutorial", "Tutorial\Tutorial.fsproj", "{D932E16A-F61E-4620-8601-F779B0A78450}"
 EndProject
@@ -31,9 +31,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSharpXamarin.CSharpUI.VS20
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		FSharpXamarin.AppWindows8\FSharpXamarin.AppWindows8.Shared\FSharpXamarin.AppWindows8.Shared.projitems*{eb4d4f48-45ce-4926-9d9b-1b80235bf7ea}*SharedItemsImports = 4
-		FSharpXamarin.AppWindows8\FSharpXamarin.AppWindows8.Shared\FSharpXamarin.AppWindows8.Shared.projitems*{632bbda2-0eca-42ae-9589-d57d22d55acf}*SharedItemsImports = 13
 		FSharpXamarin.AppWindows8\FSharpXamarin.AppWindows8.Shared\FSharpXamarin.AppWindows8.Shared.projitems*{197a9406-288e-498d-bd73-2d993a6b7137}*SharedItemsImports = 4
+		FSharpXamarin.AppWindows8\FSharpXamarin.AppWindows8.Shared\FSharpXamarin.AppWindows8.Shared.projitems*{632bbda2-0eca-42ae-9589-d57d22d55acf}*SharedItemsImports = 13
+		FSharpXamarin.AppWindows8\FSharpXamarin.AppWindows8.Shared\FSharpXamarin.AppWindows8.Shared.projitems*{eb4d4f48-45ce-4926-9d9b-1b80235bf7ea}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
