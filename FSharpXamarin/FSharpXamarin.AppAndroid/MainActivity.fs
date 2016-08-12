@@ -14,6 +14,13 @@ type MainActivity () =
     inherit Activity ()
 
     let mutable count:int = 1
+ 
+    let LegalValue num (button : Button) =
+        let value = Always5.Trick2.Solve(num)
+        button.Text <- sprintf "%d clicks! -- %d Value!" count value
+
+    let IllegalValue (button : Button) =
+        button.Text <- sprintf "%d clicks! -- Illegal Value!" count
 
     override this.OnCreate (bundle) =
 
@@ -26,11 +33,12 @@ type MainActivity () =
         let button = this.FindViewById<Button>(Resource_Id.MyButton)
         button.Click.Add (fun args -> 
             count <- count + 1
-            let value = Always5.Trick1.Solve(count);
-            button.Text <- sprintf "%d clicks! -- %d Value!" count value
 
-            
+            let val1to99 = Always5.Trick2.CreateAnyNumber1To99(count)
+            match val1to99 with
+                | Some _ -> LegalValue val1to99.Value button
+                | None -> IllegalValue button
         )
-
+    
 
 
