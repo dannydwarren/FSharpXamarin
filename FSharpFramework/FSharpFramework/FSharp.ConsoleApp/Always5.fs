@@ -19,7 +19,9 @@
     
     module Trick2 =
         type AnyNumber1To99 = private AnyNumber1To99 of int
-                
+         
+        let Unpack (AnyNumber1To99 i) = i
+
         
         let CreateAnyNumber1To99FromInt (aNumber:int) =
             if 1 <= aNumber && aNumber <= 99
@@ -28,7 +30,7 @@
 
         let CreateAnyNumber1To99FromString (aString:string) =
             match System.Int32.TryParse(aString) with
-               | (true,int) -> CreateAnyNumber1To99FromInt(int)
+               | (true,myIntVal) -> CreateAnyNumber1To99FromInt(myIntVal)
                | _ -> None
 
         let CreateAnyNumber1To99 (x:obj) = 
@@ -37,7 +39,6 @@
                 | :? int as i -> CreateAnyNumber1To99FromInt i
                 | _ -> None
 
-        let Unpack (AnyNumber1To99 i) = i
         
         let MultiplyBy5 current = current * 5
         let Add25 current = current + 25
