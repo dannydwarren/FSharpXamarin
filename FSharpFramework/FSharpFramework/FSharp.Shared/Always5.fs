@@ -48,13 +48,13 @@
 
         let Solve (anyNumber1To10 : Option<AnyNumber1To10>) : Option<int> =
             match anyNumber1To10 with
-                | Some number1To10 ->
-                    number1To10
+                | Some num ->
+                    num
                     |> Unpack
                     |> MultiplyBy5
                     |> Add25
                     |> DivideBy5
-                    |> fun x -> (x, Unpack number1To10)
+                    |> fun x -> (x, Unpack num)
                     |> SubtractOriginal
                     |> Some
                 | _ -> None

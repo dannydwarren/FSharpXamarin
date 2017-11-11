@@ -7,8 +7,6 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Tutorial", "Tutorial\Tutori
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.ConsoleApp", "FSharp.ConsoleApp\FSharp.ConsoleApp.fsproj", "{C45BA79F-5D2F-4656-B66C-AF1C027E7851}"
 EndProject
-Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "FSharp.Common", "FSharp.Common\FSharp.Common.fsproj", "{36352AB5-CC7D-4D41-8DAD-6AAC11950EDF}"
-EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.AndroidApp", "FSharp.AndroidApp\FSharp.AndroidApp.fsproj", "{94CD9622-DA49-46DD-B3AE-5410DE6370AF}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.Shared", "FSharp.Shared\FSharp.Shared.fsproj", "{43D3DE0E-C2B4-40EF-A29D-0AC3158942BE}"
@@ -27,10 +25,6 @@ Global
 		{C45BA79F-5D2F-4656-B66C-AF1C027E7851}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C45BA79F-5D2F-4656-B66C-AF1C027E7851}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C45BA79F-5D2F-4656-B66C-AF1C027E7851}.Release|Any CPU.Build.0 = Release|Any CPU
-		{36352AB5-CC7D-4D41-8DAD-6AAC11950EDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{36352AB5-CC7D-4D41-8DAD-6AAC11950EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{36352AB5-CC7D-4D41-8DAD-6AAC11950EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{36352AB5-CC7D-4D41-8DAD-6AAC11950EDF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{94CD9622-DA49-46DD-B3AE-5410DE6370AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{94CD9622-DA49-46DD-B3AE-5410DE6370AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94CD9622-DA49-46DD-B3AE-5410DE6370AF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
